@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS coolCorp_db;
-CREATE DATABASE coolCorp_db;
-USE coolCorp_db;
+DROP DATABASE IF EXISTS coolcorp_db;
+CREATE DATABASE coolcorp_db;
+USE coolcorp_db;
