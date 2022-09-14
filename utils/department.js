@@ -31,4 +31,5 @@ function addDepartment() {
     });
 }
 
-module.exports = (getDepartments, addDepartment);
+exports.getDepartments = getDepartments;
+exports.addDepartment = addDepartment;

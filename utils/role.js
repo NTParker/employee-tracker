@@ -32,7 +32,7 @@ function addRole() {
       },
     ])
     .then(function (answer) {
-      const sql = `INSERT INTO role (title, salary, department_id) VALUES ('${answer.newRole}, ${answer.newSalary}, ${answer.departmentId}');`;
+      const sql = `INSERT INTO role (title, salary, department_id) VALUES ('${answer.newRole}', '${answer.newSalary}', '${answer.departmentId}');`;
       db.query(sql, (err, res) => {
         if (err) throw err;
         console.table(res);
@@ -41,4 +41,5 @@ function addRole() {
     });
 }
 
-module.exports = (getRoles, addRole);
+exports.getRoles = getRoles;
+exports.addRole = addRole;
