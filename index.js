@@ -33,6 +33,7 @@ function promptUser() {
           break;
         case "View all Employees":
           employee.getEmployees();
+          console.log("Here");
           break;
         case "Add a Department":
           department.addDepartment();
