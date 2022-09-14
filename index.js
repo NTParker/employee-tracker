@@ -9,7 +9,7 @@ function promptUser() {
   inquirer.prompt([
     {
       type: "list",
-      name: "menu",
+      name: "mainMenu",
       message: "Please select an option.",
       choices: [
         "View all Departments",

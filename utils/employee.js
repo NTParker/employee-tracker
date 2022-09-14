@@ -47,4 +47,28 @@ function addEmployee() {
     });
 }
 
-module.exports = (getEmployees, addEmployee);
+function updateRole() {
+  inquirer
+    .prompt([
+      {
+        type: "text",
+        name: "employeeId",
+        message: "Please enter the ID of the employee",
+      },
+      {
+        type: "text",
+        name: "newId",
+        message: "Please enter the new role ID for the employee",
+      },
+    ])
+    .then(function (answer) {
+      const sql = `UPDATE employee SET role_id = '${answer.newId}' WHERE id = '${answer.employeeId}'`;
+      db.query(sql, (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        promptUser.promptUser();
+      });
+    });
+}
+
+module.exports = (getEmployees, addEmployee, updateRole);
